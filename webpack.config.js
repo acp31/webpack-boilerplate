@@ -1,8 +1,5 @@
 var webpack = require('webpack');
 
-/*
- * Default webpack configuration for development
- */
 var config = {
   devtool: 'eval-source-map',
   entry:  __dirname + "/app/App.js",
@@ -28,9 +25,6 @@ var config = {
   },
 }
 
-/*
- * If bundling for production, optimize output
- */
 if (process.env.NODE_ENV === 'production') {
   config.devtool = false;
   config.plugins = [
